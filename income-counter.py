@@ -23,6 +23,7 @@ entry.insert(0, 0)
 
 total_amount = 0
 hourly_rate = 0
+
 def update_amount():
   global total_amount, hourly_rate
   hourly_rate = float(entry.get())
@@ -38,10 +39,11 @@ button = tk.Button(
   text = 'Start',
   width=25,
   height=5,
-  foreground='red',
-  background='yellow',
+  bg='red',
+  fg='yellow',
   command=update_amount
-).pack()
+)
+button.pack()
 
 
 window.after(1000, update_amount)
